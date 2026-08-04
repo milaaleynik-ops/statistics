@@ -28,4 +28,16 @@ public class StatisticsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    void findMaxWhenSeveralMaxValues() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomes = {12, 5, 8, 12, 3};
+
+        long expected = 12;
+
+        long actual = service.findMax(incomes);
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
